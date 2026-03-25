@@ -1,0 +1,10 @@
+# Example configuration for transmission MAX bot
+max_token: "YOUR_TELEGRAM_BOT_TOKEN"
+allowed_uids: [-1]
+
+transmission:
+  username: "transmission"
+  password: "YOUR_TRANSMISSION_PASSWORD"
+  host: "127.0.0.1"
+  scheme: "http"  # or "https"
+  port: 9091
