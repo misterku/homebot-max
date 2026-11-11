@@ -5,7 +5,7 @@ TransmissionBot is a lightweight MAX bot that allows you to manage your Transmis
 ## Features
 
 - **Torrent Upload**: Send a `.torrent` file to the bot, and it will automatically add it to Transmission.
-- **Cleanup**: Remove finished torrents from Transmission with the `/cleanup` command.
+- **Cleanup**: Automatically removes finished torrents from Transmission in the background (every 10 minutes); you're notified when something is removed.
 - **Status Check**: Get a quick overview of active and finished torrents with `/status`.
 - **Access Control**: Only authorized users (by MAX User ID) can interact with the bot.
 
@@ -13,7 +13,7 @@ TransmissionBot is a lightweight MAX bot that allows you to manage your Transmis
 
 - **Go** (1.24+) – Core programming language.
 - **MAX Bot API** – via `max-bot-api-client-go`.
-- **Transmission RPC** – via `transmissionrpc/v3`.
+- **Transmission RPC** – via a built-in HTTP client (no external library).
 - **Configuration** – `viper` for YAML/ENV configuration.
 
 ## Configuration
@@ -51,8 +51,7 @@ Environment variables are also supported (e.g., `MAX_TOKEN`, `TRANSMISSION_PASSW
    ```
 3. Send a `.torrent` file to your bot in MAX (if your UID is allowed).
 4. Use the commands:
-   - `/cleanup` – remove finished torrents.
-   - `/status` – show active/finished torrent counts.
+   - `/status` – show active/finished torrent counts and verify the background cleanup task is running.
 
 ## Development & Vibe‑Coding
 
