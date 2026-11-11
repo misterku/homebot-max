@@ -1,0 +1,9 @@
+# Build artifacts
+/maxbot
+/maxbot-arm64
+
+# Local config (contains secrets: token, password)
+/config.yaml
+
+# Downloads staging directory
+/downloads/
